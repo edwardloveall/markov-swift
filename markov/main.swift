@@ -8,5 +8,6 @@
 
 import Foundation
 
-print("Hello, World!")
-
+if let contents = File.open(Process.arguments[1]) {
+    print(contents)
+}
