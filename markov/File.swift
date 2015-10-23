@@ -10,7 +10,7 @@ import Foundation
 
 class File {
     class func open (path: NSString, utf8: NSStringEncoding = NSUTF8StringEncoding) -> String? {
-        let expandedPath = path.stringByExpandingTildeInPath
+        let expandedPath = path.stringByStandardizingPath
         let fileURL = NSURL(fileURLWithPath: expandedPath)
 
         do {
