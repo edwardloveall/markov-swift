@@ -8,15 +8,30 @@
 
 import Foundation
 
-struct WordGraph {
+class WordGraph {
     var words = [String : Word]()
+    var fullText: String
     
-    mutating func addWord(wordString: String, follower: String) {
+    init(text: String) {
+        fullText = text
+    }
+    
+    func addWord(wordString: String, follower: String) {
         var word = words[wordString]
         if word == nil {
             word = Word(string: wordString)
         }
         word?.addFollower(follower)
         words[wordString] = word!
+    }
+    
+    func addAllWords() {
+        for line in WordParser(text: fullText).lines {
+            for (i, wordString) in line.enumerate() {
+                if i + 1 < line.endIndex {
+                    addWord(wordString, follower: line[i + 1])
+                }
+            }
+        }
     }
 }

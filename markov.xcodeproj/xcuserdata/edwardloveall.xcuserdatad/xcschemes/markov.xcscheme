@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "~/.gitconfig"
+            argument = "~/Projects/Domain\ Book/book/chapters/registering-a-new-domain.md"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

@@ -9,8 +9,6 @@
 import Foundation
 
 if let contents = File.open(Process.arguments[1]) {
-    print(contents)
+    var graph = WordGraph(text: contents)
+    graph.addAllWords()
 }
-
-var graph = WordGraph()
-graph.addWord("awesome", follower: "sauce")
