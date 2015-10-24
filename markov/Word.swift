@@ -23,4 +23,9 @@ class Word {
             followers.updateValue(1, forKey: word)
         }
     }
+    
+    func randomFollower() -> String {
+        let index = Int(arc4random_uniform(UInt32(followers.count)))
+        return Array(followers.keys)[index]
+    }
 }

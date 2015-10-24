@@ -34,4 +34,21 @@ class WordGraph {
             }
         }
     }
+    
+    func sentence() -> String {
+        let randomStarterIndex = Int(arc4random_uniform(UInt32(words.count)))
+        var prevWord = Array(words.keys)[randomStarterIndex]
+        var sentenceString: [String] = [prevWord]
+
+        while(true) {
+            if let nextWord = words[prevWord] {
+                prevWord = nextWord.randomFollower()
+                sentenceString.append(prevWord)
+            } else {
+                break
+            }
+        }
+
+        return sentenceString.joinWithSeparator(" ")
+    }
 }

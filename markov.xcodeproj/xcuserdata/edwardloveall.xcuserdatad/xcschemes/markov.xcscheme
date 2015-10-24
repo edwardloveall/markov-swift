@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "~/Projects/Domain\ Book/book/chapters/registering-a-new-domain.md"
+            argument = "~/Desktop/blank-space-lyrics.txt"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
