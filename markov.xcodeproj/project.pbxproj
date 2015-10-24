@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		392ACC3B1BD86AB000B40D3B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392ACC3A1BD86AB000B40D3B /* main.swift */; };
 		392ACC421BD86DD100B40D3B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392ACC411BD86DD100B40D3B /* File.swift */; };
+		39A185431BDAC73A0014DFDB /* WordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A185421BDAC73A0014DFDB /* WordParser.swift */; };
+		39A185451BDAC8A60014DFDB /* WordGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A185441BDAC8A60014DFDB /* WordGraph.swift */; };
+		39A185471BDAC9CF0014DFDB /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A185461BDAC9CF0014DFDB /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,9 @@
 		392ACC371BD86AB000B40D3B /* markov */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = markov; sourceTree = BUILT_PRODUCTS_DIR; };
 		392ACC3A1BD86AB000B40D3B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		392ACC411BD86DD100B40D3B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		39A185421BDAC73A0014DFDB /* WordParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordParser.swift; sourceTree = "<group>"; };
+		39A185441BDAC8A60014DFDB /* WordGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGraph.swift; sourceTree = "<group>"; };
+		39A185461BDAC9CF0014DFDB /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 			children = (
 				392ACC3A1BD86AB000B40D3B /* main.swift */,
 				392ACC411BD86DD100B40D3B /* File.swift */,
+				39A185421BDAC73A0014DFDB /* WordParser.swift */,
+				39A185441BDAC8A60014DFDB /* WordGraph.swift */,
+				39A185461BDAC9CF0014DFDB /* Word.swift */,
 			);
 			path = markov;
 			sourceTree = "<group>";
@@ -122,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A185431BDAC73A0014DFDB /* WordParser.swift in Sources */,
+				39A185451BDAC8A60014DFDB /* WordGraph.swift in Sources */,
+				39A185471BDAC9CF0014DFDB /* Word.swift in Sources */,
 				392ACC3B1BD86AB000B40D3B /* main.swift in Sources */,
 				392ACC421BD86DD100B40D3B /* File.swift in Sources */,
 			);
