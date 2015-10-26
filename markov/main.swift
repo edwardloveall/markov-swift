@@ -10,6 +10,5 @@ import Foundation
 
 if let contents = File.open(Process.arguments[1]) {
     var marokv = Markov(text: contents)
-    marokv.addAllWords()
     print(marokv.sentence())
 }

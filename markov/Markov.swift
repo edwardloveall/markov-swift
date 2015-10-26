@@ -14,6 +14,7 @@ class Markov {
     
     init(text: String) {
         fullText = text
+        addAllWords()
     }
     
     func addWord(wordString: String, follower: String) {
