@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WordGraph {
+class Markov {
     var words = [String : Word]()
     var fullText: String
     
@@ -44,9 +44,7 @@ class WordGraph {
             if let nextWord = words[prevWord] {
                 prevWord = nextWord.randomFollower()
                 sentenceString.append(prevWord)
-            } else {
-                break
-            }
+            } else { break }
         }
 
         return sentenceString.joinWithSeparator(" ")
