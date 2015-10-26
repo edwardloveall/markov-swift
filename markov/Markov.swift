@@ -39,15 +39,15 @@ class Markov {
     func sentence() -> String {
         let randomStarterIndex = Int.random(words.count)
         var prevWord = Array(words.keys)[randomStarterIndex]
-        var sentenceString: [String] = [prevWord]
+        var sentenceWords: [String] = [prevWord]
 
         while(true) {
             if let nextWord = words[prevWord] {
-                prevWord = nextWord.randomFollower()
-                sentenceString.append(prevWord)
+                prevWord = nextWord.weightedFollower()
+                sentenceWords.append(prevWord)
             } else { break }
         }
 
-        return sentenceString.joinWithSeparator(" ")
+        return sentenceWords.joinWithSeparator(" ")
     }
 }

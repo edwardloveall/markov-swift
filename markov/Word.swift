@@ -28,4 +28,16 @@ class Word {
         let index = Int.random(followers.count)
         return Array(followers.keys)[index]
     }
+
+    func weightedFollower() -> String {
+        let totalWeight = followers.values.reduce(0, combine: +)
+        let randomWeight = Int.random(totalWeight)
+        var index = 0
+        var count = Array(followers.values)[index]
+        while(count <= randomWeight) {
+            index++
+            count += Array(followers.values)[index]
+        }
+        return Array(followers.keys)[index]
+    }
 }
