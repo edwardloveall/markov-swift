@@ -37,7 +37,7 @@ class Markov {
     }
     
     func sentence() -> String {
-        let randomStarterIndex = Int(arc4random_uniform(UInt32(words.count)))
+        let randomStarterIndex = Int.random(words.count)
         var prevWord = Array(words.keys)[randomStarterIndex]
         var sentenceString: [String] = [prevWord]
 
