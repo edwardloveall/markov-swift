@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Int {
+extension Int {
     public static func random(upper: Int = 100) -> Int {
         return Int(arc4random_uniform(UInt32(upper)))
     }
