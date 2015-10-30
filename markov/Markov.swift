@@ -18,19 +18,17 @@ class Markov {
     }
     
     func addWord(wordString: String, follower: String) {
-        var word = words[wordString]
-        if word == nil {
-            word = Word(string: wordString)
-        }
-        word?.addFollower(follower)
-        words[wordString] = word!
+        let word = words[wordString] ?? Word(string: wordString)
+        word.addFollower(follower)
+        words[wordString] = word
     }
-    
+
     func addAllWords() {
-        for line in WordParser(text: fullText).lines {
+        let allLines = WordParser(text: fullText).lines
+        for line in allLines {
             for (i, wordString) in line.enumerate() {
-                if i + 1 < line.endIndex {
-                    addWord(wordString, follower: line[i + 1])
+                if let follower = line[safe: i + 1] {
+                    addWord(wordString, follower: follower)
                 }
             }
         }
