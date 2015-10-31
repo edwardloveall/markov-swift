@@ -11,12 +11,8 @@ import Foundation
 class WordParser {
     let fullText: String
     var lines: [[String]] {
-        get {
-            let lineArray = fullText.componentsSeparatedByString("\n")
-            return lineArray.map { (let line) -> [String] in
-                return line.componentsSeparatedByString(" ")
-            }
-        }
+        return fullText.componentsSeparatedByString("\n")
+                       .map { $0.componentsSeparatedByString(" ") }
     }
     
     init(text: String) {
