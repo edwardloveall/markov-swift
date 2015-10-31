@@ -17,11 +17,8 @@ class Word {
     }
     
     func addFollower(word: String) {
-        if let follower = followers[word] {
-            followers.updateValue(follower.successor(), forKey: word)
-        } else {
-            followers.updateValue(1, forKey: word)
-        }
+        let follower = followers[word] ?? 0
+        followers.updateValue(follower.successor(), forKey: word)
     }
     
     func randomFollower() -> String {
